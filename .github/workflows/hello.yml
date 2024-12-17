@@ -1,0 +1,27 @@
+name: Deployment Pipeline
+
+on:
+  label:
+    types:
+      - created
+
+jobs:
+  update-readme:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Añadir punto al final del README
+        run: echo "." >> README.md
+
+      - name: Commit y push
+        run: |
+          git config --local user.email "adan.mijangos@touchpointmarketing.mx"
+          git config --local user.name "AdanTouchPoint"
+          git commit -m "Añadir punto al final del README" -a
+          git push

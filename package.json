@@ -1,0 +1,26 @@
+{
+  "name": "3servicesdemo",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "ai": "^2.2.7",
+    "axios": "^1.3.5",
+    "bootstrap": "^5.2.3",
+    "eslint": "8.38.0",
+    "eslint-config-next": "13.3.0",
+    "next": "13.3.0",
+    "openai-edge": "^1.2.2",
+    "react": "18.2.0",
+    "react-bootstrap": "^2.7.2",
+    "react-dom": "18.2.0",
+    "react-loader-spinner": "^4.0.0",
+    "react-scroll": "^1.8.9",
+    "react-share": "^4.4.1"
+  }
+}
